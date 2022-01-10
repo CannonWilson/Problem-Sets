@@ -2,9 +2,9 @@
 
 ---
 
-## Question 1: Set up a new React project
+## Problem 1: Set up a new React project
 <details>
-<summary>Hint</summary>
+<summary>Hints</summary>
 
 1. Use the terminal to go to the directory you want
    to hold your new app.
@@ -12,7 +12,7 @@
 </details>
 
 <details>
-  <summary>Answer</summary>
+  <summary>Solution</summary>
 
 1. Navigate to the desired parent directory 
 of your project using the `cd` command in 
@@ -39,16 +39,16 @@ let you create a single-page application using the
 React library.
 </details>
 
-## Question 2: Run your new React project in the browser
+## Problem 2: Run your new React project in the browser
 <details>
-<summary>Hint</summary>
+<summary>Hints</summary>
 
 1. Use the terminal inside WebStorm to go inside the app you just created.
 2. Run the command to start the development server.
 </details>
 
 <details>
-  <summary>Answer</summary>
+  <summary>Solution</summary>
 
 1. If you are already in the directory you just ran the
 `create-react-app` command inside of, simply run `cd YourAppName`
@@ -85,9 +85,9 @@ React app locally in your browser.
 
 </details>
 
-## Question 3: Delete the "Learn React" link being rendered to the page
+## Problem 3: Delete the "Learn React" link being rendered to the page
 <details>
-<summary>Hint</summary>
+<summary>Hints</summary>
 
 1. Try checking out index.js and see what it's rendering 
 to the page.
@@ -95,7 +95,7 @@ to the page.
 </details>
 
 <details>
-  <summary>Answer</summary>
+  <summary>Solution</summary>
 
 1. Click on "App.js" in the "src" folder of your project
 2. Delete lines 12-19
@@ -124,7 +124,7 @@ to the screen because it is no longer a part of the
 
 </details>
 
-## Question 4: Make the React logo on the page half as tall
+## Problem 4: Make the React logo on the page half as tall
 
 <details>
 <summary>Hint</summary>
@@ -134,7 +134,7 @@ styling coming from?
 </details>
 
 <details>
-  <summary>Answer</summary>
+  <summary>Solution</summary>
 
 1. Click on "App.css" in the "src" folder of your project
 2. Change line 6 from `height: 40vmin;` to `height: 20vmin;`
@@ -161,7 +161,7 @@ class is specified on lines 5-8 of "App.css".
 
 </details>
 
-## Question 5: Stop running your React app
+## Problem 5: Stop running your React app
 <details>
 <summary>Hint</summary>
 
@@ -170,7 +170,7 @@ class is specified on lines 5-8 of "App.css".
 </details>
 
 <details>
-  <summary>Answer</summary>
+  <summary>Solution</summary>
 
 1. Go to the WebStorm terminal and type `control-c` 
 (if you are on a Mac).
