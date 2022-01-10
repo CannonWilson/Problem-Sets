@@ -198,3 +198,122 @@ export const StoreItem = (props) => {
 ```
 You can read more about anonymous functions [here](https://www.javascripttutorial.net/javascript-anonymous-functions/).
 </details>
+
+## Challenge: Map many items onto StoreItem components
+
+Delete the three `StoreItem` components from "App.js".
+Copy the code below into your "App.js" above the return statement.
+``` 
+const items = [
+    {
+      id: 0,
+      title: "banana",
+      cost: 0.49
+    },
+    {
+      id: 1,
+      title: "car",
+      cost: 15000
+    },
+    {
+      id: 2,
+      title: "monkey",
+      cost: 2
+    },
+    {
+      id: 3,
+      title: "table",
+      cost: 2000
+    },
+    {
+      id: 4,
+      title: "couch",
+      cost: 600
+    },
+    {
+      id: 5,
+      title: "remote",
+      cost: 20
+    },
+    {
+      id: 6,
+      title: "bowl",
+      cost: 3
+    },
+    {
+      id: 7,
+      title: "drums",
+      cost: 2500
+    },
+    {
+      id: 8,
+      title: "diploma",
+      cost: 1000000
+    },
+    {
+      id: 9,
+      title: "tv",
+      cost: 400
+    },
+    {
+      id: 10,
+      title: "phone",
+      cost: 1000
+    },
+    {
+      id: 11,
+      title: "pillow",
+      cost: 50
+    }
+  ]
+```
+Then, use the `map` function to map all of these items onto
+`StoreItem` components that you render to the screen. `id` 
+corresponds to the `StoreItem`'s number, `title`
+corresponds to the `StoreItem`'s name, and `cost`
+corresponds to the `StoreItem`'s price.
+
+<details>
+<summary>Hint 1</summary>
+
+Start by putting some open and closing curly braces in the header
+and above the image, where you deleted the three `StoreItem` components.
+</details>
+
+<details>
+<summary>Hint 2</summary>
+
+Inside the curly braces, write `items.map()`. Look at the 
+documentation [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) to try and figure out what to put inside
+the parentheses.
+</details>
+
+<details>
+<summary>Hint 3</summary>
+
+Inside the curly braces, you wrote `items.map()`. Now, take each item
+and map it to a new `StoreItem` component where the attributes/props
+of each component is the corresponding value of the current item's
+properties (id, title, or cost).
+</details>
+
+<details>
+<summary>Answer</summary>
+
+Here's what the code should look like:
+```
+{items.map( item => {
+           return <StoreItem
+              number = {item.id}
+              name = {item.title}
+              price = {item.cost}
+          />
+        } )} 
+```
+For every value in the items array, which map refers to as `item`,
+return a new `StoreItem` component where the attributes passed in
+as props are the corresponding properties in the current item object.
+
+If you want an extra challenge, store the items array above in its
+own separate file and still render all items to the screen.
+</details>
