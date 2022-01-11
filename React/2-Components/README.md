@@ -199,6 +199,32 @@ export const StoreItem = (props) => {
 You can read more about anonymous functions [here](https://www.javascripttutorial.net/javascript-anonymous-functions/).
 </details>
 
+## Problem 4: Add CSS to your component
+Create a file named "ContactForm.css" in the "Components"
+directory. Give your `StoreItem` a blue background.
+
+<details>
+<summary>Solution</summary>
+
+1. Create a new CSS file as instructed above.
+2. Add the following to the file to create a new class
+that gives elements a blue background:
+```
+.blue-background {
+    background-color: blue;
+}
+```
+3. Import the CSS stylesheet you made inside "StoreItem.js":
+```
+import "./StoreItem.css"
+```
+4. Modify the `<h2>` element being returned to use the new
+class you made:
+```
+    return <h2 className="blue-background">number: {props.number}, name: {props.name}, price: {props.price}</h2>
+```
+</details>
+
 ## Challenge: Map many items onto StoreItem components
 
 Delete the three `StoreItem` components from "App.js".
