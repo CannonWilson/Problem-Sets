@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import StoreItem from "./Components/StoreItem";
+import Number from "./Components/Number";
+import ContactForm from "./Components/ContactForm";
 
 function App() {
 
@@ -71,6 +73,8 @@ function App() {
     <div className="App">
       <header className="App-header">
 
+        <ContactForm />
+
         {items.map( item => {
            return <StoreItem
               number = {item.id}
@@ -78,6 +82,8 @@ function App() {
               price = {item.cost}
           />
         } )}
+
+        <Number />
 
         <img src={logo} className="App-logo" alt="logo" />
         <p>
