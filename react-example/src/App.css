@@ -3,7 +3,9 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  /* React Problem Set #1 Problem 4 */
+  height: 20vmin;
+  /* height: 40vmin; */
   pointer-events: none;
 }
 

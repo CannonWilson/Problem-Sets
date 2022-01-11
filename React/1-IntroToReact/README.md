@@ -98,7 +98,7 @@ to the page.
   <summary>Solution</summary>
 
 1. Click on "App.js" in the "src" folder of your project
-2. Delete lines 12-19
+2. Delete from `<a>` to `</a>`
 
 ### More info
 
@@ -137,7 +137,7 @@ styling coming from?
   <summary>Solution</summary>
 
 1. Click on "App.css" in the "src" folder of your project
-2. Change line 6 from `height: 40vmin;` to `height: 20vmin;`
+2. Inside `.App-logo` change `height: 40vmin;` to `height: 20vmin;`
 
 ### More info
 
