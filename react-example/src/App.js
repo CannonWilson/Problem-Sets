@@ -105,7 +105,7 @@ function App() {
 
         {/* React Problem Set #4 Challenge */}
         <GuessAge
-            name="Mark"
+            name="Joe"
         />
 
         {/* React Problem Set #4 Problem 1 */}
