@@ -1,3 +1,5 @@
+// Node Problem Set #1 Problem 2
+
 import fetch from "node-fetch"
 
 function GetPrice() {

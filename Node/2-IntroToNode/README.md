@@ -1,4 +1,4 @@
-# Node Problem Set #1: Intro to Node
+# Node Problem Set #2: Intro to Node
 
 ---
 
