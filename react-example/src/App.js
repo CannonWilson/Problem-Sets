@@ -1,8 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 
-// React Problem Set #2 Problem 3
-import StoreItem from "./Components/StoreItem";
+// React Problem Set #4 Problem 3
+import GuessAge from "./Components/GuessAge";
+
+// React Problem Set #4 Problem 1
+import InputField from "./Components/InputField";
 
 // React Problem Set #3 Problem 1, removed in Problem 4
 // import {useState} from "react"
@@ -22,6 +25,9 @@ import ContactForm from "./Components/ContactForm";
 // function StoreItem(props) {
 //   return <h2>number: {props.number}, name: {props.name}, price: {props.price}</h2>
 // }
+
+// React Problem Set #2 Problem 3
+import StoreItem from "./Components/StoreItem";
 
 function App() {
 
@@ -96,6 +102,15 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+
+        {/* React Problem Set #4 Challenge */}
+        <GuessAge
+            name="Mark"
+        />
+
+        {/* React Problem Set #4 Problem 1 */}
+        <InputField />
+
 
         {/* Code for React Problem Set #3 Challenge*/}
         <ContactForm />
