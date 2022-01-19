@@ -4,7 +4,9 @@
 
 MongoSh is the command line tool created by MongoDB.
 It allows us to interact with our cluster directly
-from our terminal. 
+from our terminal. It also give us access to some
+important functionality that we can't use in the
+Data Explorer.
 
 Whenever you need to connect to your cluster, simply
 go to your cluster page on MongoDB and click "Connect"
@@ -227,7 +229,40 @@ collection too, so be very careful with this command.
 dropped the neighborhoods collection.
 </details>
 
-## Problem 6: Prettier Output
+## Problem 6: Projection
+We use projection to limit the fields contained in the documents
+we receive as output from our queries.
+
+1. Use projection to show the population (and only the population,
+   do not include the _id field) of every zip code in Alaska.
+2. Use projection to show the destination airport and the
+   number of stops (you can
+   show the _id field) of all
+   documents in the routes collection with a source airport of
+   Amarillo (AMA)
+3. Use projection to show all documents in the companies
+   collection with founding dates after 2010, without showing their
+   company names.
+
+<details>
+<summary>Hint: Syntax</summary>
+
+You will put your projection inside the parentheses of the
+find() like this: `find({<query>}, {<projection>})`. Projection
+works by labeling fields either 1 (include) or 0 (exclude).
+You must use either 1 OR 0 in a projection, with the exception
+that the "_id" field can be specified as 1 or 0 in any projection.
+</details>
+
+<details>
+<summary>Solutions</summary>
+
+1. ```db.zips.find({ "state" : "AL"}, {"pop" : 1, "_id" : 0})```
+2. ```db.routes.find({"src_airport" : "AMA"}, {"dst_airport" : 1, "stops": 1})```
+3. ```db.companies.find({"founded_year" : {"$gt" : 2005}}, {"name" : 0})```
+</details>
+
+## Problem 7: Prettier Output
 Write a query to find out if there are any lucky students in the
 grades collection of the sample_training database that have 
 the same student_id as their class_id. Make your output pretty!
@@ -251,7 +286,7 @@ db.grades.find({ "$expr" : {"$eq" : ["$student_id", "$class_id"]} }).pretty()
 ```
 </details>
 
-## Problem 7: Count Your Results
+## Problem 8: Count Your Results
 How many zip codes are there in the state of Texas? Use
 the zips collection to find out.
 
@@ -265,7 +300,7 @@ db.zips.find( {"state" : "TX"} ).count()
 ```
 </details>
 
-## Problem 8: Sorting Your Output
+## Problem 9: Sorting Your Output
 1. Return every document in the zips collection
 sorted from lowest population to highest population. If two zip
 codes have the same population, they should appear in alphabetical
@@ -320,7 +355,7 @@ the syntax shown here.
 </details>
 
 
-## Problem 9: Limit the Number of Results
+## Problem 10: Limit the Number of Results
 Find the one trip in the trips collection that was 
 the longest by trip duration.
 
@@ -361,9 +396,20 @@ Since it rarely makes sense to limit your query
 results before sorting them, MongoDB always sorts first, then limits
 the result of the search.
 
+Note that projection and `limit()` are very different things.
+Projection modifies the fields shown in the output documents while
+`limit()` determines the number of documents that are returned. They
+can also be combined (and they frequently are) like this command
+that only returns the "_id" and "tripduration" field values, sorts
+to find the largest "tripduration" value, and then limits to only
+return one document:
+```
+db.trips.find({},{"tripduration" : 1}).sort( {"tripduration" : -1} ).limit(1)
+```
+
 </details>
 
-## Problem 10 (Challenge): Backup Your Data
+## Problem 11 (Challenge): Backup Your Data
 First, close your connection with your cluster. Then,
 make a backup of the data in the zips collection of the
 sample_training database. Export the collection in JSON format

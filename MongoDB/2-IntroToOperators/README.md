@@ -96,7 +96,7 @@ The $all operator selects all documents where the value of
 the specified field is an array that contains all the given
 elements regardless of their order.
 
-1. Write a query that finds all documents in the movies collection in the
+Write a query that finds all documents in the movies collection in the
 sample_mflix database that are short westerns.
 
 <details>
@@ -165,7 +165,7 @@ string field. This means that if a field's value is
 "McDonalds Burgers", a $regex given "Burger" will return the document 
 containing that field.
 
-1. Write a query that filters for executives with a last name
+Write a query that filters for executives with a last name
 that includes "Zuck" in the companies collection.
 
 <details>
