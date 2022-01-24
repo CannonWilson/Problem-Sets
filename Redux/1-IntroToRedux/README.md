@@ -223,4 +223,10 @@ the `increaseAction` or the `decreaseAction` to the store like this:
 Notice the parentheses after `increaseAction` and `decreaseAction`. 
 The store is dispatching a call to the action function, 
 not the action function itself.
+
+Now, you should be able to see the results of your work by 
+right-clicking on your webpage and selecting "Inspect". Click 
+on "Console" in the top panel of the developer tools that
+pop up on the right side of your screen. Click your buttons and
+see what happens in the console.
 </details>
