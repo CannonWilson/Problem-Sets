@@ -5,6 +5,6 @@ import {CounterReducer} from "./CounterReducer";
 
 export const combinedReducer = combineReducers({
     isLoggedIn: LoggedReducer,
-    wizards: WizardReducer,
+    wizardChoices: WizardReducer,
     counter: CounterReducer
 })

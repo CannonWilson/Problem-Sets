@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 
 function SignIn() {
     const isLoggedIn = useSelector( (state) => state.isLoggedIn )
-    const wizards = useSelector( (state) => state.wizards )
+    const wizardChoices = useSelector( (state) => state.wizardChoices )
     const counter = useSelector( (state) => state.counter )
     const dispatch = useDispatch()
     return (
@@ -14,7 +14,7 @@ function SignIn() {
             <button onClick={ () => dispatch(LogOutAction())}>Log Out</button>
             <p>Logged In? {isLoggedIn.toString()}</p>
             <p>You have classified {counter} people.</p>
-            {wizards.map( (wizard) => <div key={wizard.name}>{wizard.name}: {wizard.isWizard.toString()}</div> )}
+            {wizardChoices.map( (wizard) => <div key={wizard.name}>{wizard.name}: {wizard.isWizard.toString()}</div> )}
             <Link to="/main">Main page Link</Link>
         </div>
     )
