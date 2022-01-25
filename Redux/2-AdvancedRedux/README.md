@@ -84,7 +84,9 @@ export default App;
 ```
 </details>
 
-## Problem 2: Log In/Log Out Actions and Reducers
+## Problem 2: 
+
+## Problem 2: Log In/Log Out Actions and Reducer
 Create a new directory inside the "src" folder named "Redux". Inside
 that folder, create two new directories named "Actions" and "Reducers".
 In these folders, make two actions and one reducer for logging in and 
@@ -209,6 +211,8 @@ export const WizardReducer = (state = [], action) => {
 
 ## Problem 4: 
 
+Created IncreaseCounter.js and  CounterReducer.js
 Created CombinedReducer.js
 Created Store.js
 Wrapped App component in index.js in Provider
+Added code to SignIn.js and Main.js (Important to use React <Link> not <a>)
