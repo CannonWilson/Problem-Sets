@@ -1,6 +1,13 @@
+import {useSelector} from "react-redux";
+
 function Main() {
+
+    const isLoggedIn = useSelector( (state) => state.isLoggedIn )
+
     return (
-        <div>Main</div>
+        <div>
+        <div>Logged in: {isLoggedIn.toString()}</div>
+        </div>
     )
 }
 

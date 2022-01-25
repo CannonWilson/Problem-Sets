@@ -6,7 +6,8 @@ create a new React project with 'redux', 'react-redux', and
 'react-router-dom' installed.
 
 In this problem set, you will create a React application 
-that allows users to choose if a particular person/character
+that flips through the pictures and names of people/characters and 
+allows users to choose if a particular person
 is a wizard or not. On one view, the user will be able 
 to sign in/sign out and view their previous choices. On the 
 other page, the user will be shown a picture and a name of 
@@ -125,5 +126,89 @@ export const LoggedReducer = (state = false, action) => {
 
 ## Problem 3: Wizard Actions and Reducers
 Create two actions for when someone decides the current person
-IS a wizard or decides the current person IS NOT a wizard. Create 
-one reducer
+IS a wizard or IS NOT a wizard. Create one reducer to handle
+both actions. The state in this case should be initialized as
+an empty array. Objects following this format should be pushed
+onto the array by the reducer:
+``` 
+{
+    name: action.payload,
+    wizard: false
+}
+```
+You will notice in the code above that the action has a property
+called 'payload'. This property is defined by the action (much 
+like 'type') by an argument passed into the action function. 
+The reducer then updates the state
+using the data stored in the action's payload.
+
+<details>
+<summary>Hint 1: Creating an Action</summary>
+
+The action should be a function that takes the wizard's name
+as its only argument. It should return an object with a unique
+'type' property, as well as a 'payload' property equal to the
+wizard's name.
+</details>
+
+<details>
+<summary>Hint 2: Updating a State Array</summary>
+
+The reducer should push new objects to the state array like this:
+```
+state.push({
+            name: action.payload,
+            wizard: false
+        })
+```
+Note that the state here should be initialized to an empty array.
+</details>
+
+<details>
+<summary>Solution</summary>
+
+1. I created a file named "Actions/YesWizard.js" holding:
+```
+export const YesWizardAction = (wizardName) => {
+    return {
+        type: "YESWIZARD",
+        payload: wizardName
+    }
+}
+```
+2. Likewise, "Actions/NoWizard.js" has this code:
+```
+export const NoWizardAction = (wizardName) => {
+    return {
+        type: "NOWIZARD",
+        payload: wizardName
+    }
+}
+```
+3. Finally, "Reducers/WizardReducer.js" has this code:
+```
+export const WizardReducer = (state = [], action) => {
+    if (action.type === "NOWIZARD") {
+        state.push({
+            name: action.payload,
+            wizard: false
+        })
+        return state
+    }
+    if (action.type === "YESWIZARD") {
+        state.push({
+            name: action.payload,
+            wizard: true
+        })
+        return state
+    }
+    return state
+}
+```
+</details>
+
+## Problem 4: 
+
+Created CombinedReducer.js
+Created Store.js
+Wrapped App component in index.js in Provider

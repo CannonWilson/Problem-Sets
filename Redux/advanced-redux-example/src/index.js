@@ -3,9 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {Provider} from "react-redux";
+import {store} from "./Redux/Store";
 
 ReactDOM.render(
-    <App />,
+    App(store),
   document.getElementById('root')
 );
 
