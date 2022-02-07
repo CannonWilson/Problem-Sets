@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Superhero Identifier</title>
+</head>
+<body>
+
+  <form method="post" action="/api">
+    <input name="superName" placeholder="Superhero:">
+    <input name="realName" placeholder="Real name:">
+    <button>Submit</button>
+    <div id="identifiedHeroes"></div>
+  </form>
+
+    <script>
+        async function fetchHeroes() {
+            const response = await fetch('/api')
+            const data = await response.json()
+            let inner = "<ul>"
+            data.forEach( hero => {
+                inner += `<li>Superhero: ${hero.superName}, Real name: ${hero.normalName}</li>`
+            } )
+            inner += "</ul>"
+            document.getElementById('identifiedHeroes').innerHTML = inner
+        }
+        fetchHeroes()
+    </script>
+</body>
+</html>

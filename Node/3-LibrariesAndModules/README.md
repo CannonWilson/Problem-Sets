@@ -184,3 +184,27 @@ what's going on when you import
 third party code to use in your application.
 
 </details>
+
+
+
+virtual pointer
+import slides, speeches, notecards
+give feedback on body language, movement, etc.
+Recording features
+Give feedback on slides on the website
+Analyze audio for feedback (rushing, too slow, etc.)
+Can you detect 'um uh'
+Change your preparation time 
+Physiological responses (heart rate, breathing)
+Physical experience of presenting (blasting lights, echoing)
+Actually teach good public speaking skills (how to organize a talk)
+- Start with how
+- Descriptive titles
+- Know how to introduce everything
+
+Q: How would people pay?
+
+The power of mental imaging (when it happens, you're prepared)
+How to have crucial conversations (needed outcomes, potential responses)
+- Dealing with hostility
+- Preparing for interviews (have a big base of potential interview questions)

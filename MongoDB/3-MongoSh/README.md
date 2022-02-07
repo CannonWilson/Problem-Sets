@@ -4,7 +4,7 @@
 
 MongoSh is the command line tool created by MongoDB.
 It allows us to interact with our cluster directly
-from our terminal. It also give us access to some
+from our terminal. It also gives us access to some
 important functionality that we can't use in the
 Data Explorer.
 

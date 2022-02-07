@@ -437,7 +437,7 @@ function Main() {
     function WizardSelector() {
         return (
             <div>
-                {/* Complete the image's src attribute using the state's counter variable */}
+                {/* Complete the image's src attribute using the state's counter variable to get the current wizard's image */}
                 <img width="300px" src={} />
 
                 {/* Add text to the paragraph below that shows the current wizard's name */}
