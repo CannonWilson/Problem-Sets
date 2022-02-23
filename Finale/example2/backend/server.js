@@ -6,7 +6,5 @@ const routes = require('./routes')
 const cors = require('cors')
 
 app.use('/users', routes)
-app.use(cors())
-app.use(express.urlencoded({ extended: true }))
 
 app.listen(port)
