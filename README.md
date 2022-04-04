@@ -3,7 +3,7 @@
 ---
 
 Hi there! In this repository you will
-find all the problems sets you will
+find all the optional problems sets you can
 complete over the course of the
 bootcamp.
 
